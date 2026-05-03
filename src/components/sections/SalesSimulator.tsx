@@ -1,18 +1,16 @@
-import { useState } from 'react'
 import { motion } from 'framer-motion'
-import { DEFAULT_KPIS, KpiState } from '../../data/defaults'
-import { useSalesCalc } from '../../hooks/useSalesCalc'
+import { KpiState } from '../../data/defaults'
+import { SalesCalcResult } from '../../hooks/useSalesCalc'
 import KpiInputPanel from '../simulator/KpiInputPanel'
 import FunnelChart from '../simulator/FunnelChart'
 
-export default function SalesSimulator() {
-  const [kpis, setKpis] = useState<KpiState>(DEFAULT_KPIS)
-  const calc = useSalesCalc(kpis)
+interface Props {
+  kpis: KpiState
+  onChange: (key: keyof KpiState, value: number) => void
+  calc: SalesCalcResult
+}
 
-  const handleChange = (key: keyof KpiState, value: number) => {
-    setKpis((prev) => ({ ...prev, [key]: value }))
-  }
-
+export default function SalesSimulator({ kpis, onChange, calc }: Props) {
   return (
     <section id="simulator" className="h-screen flex flex-col bg-navy-950 overflow-hidden">
       {/* Section header */}
@@ -40,7 +38,7 @@ export default function SalesSimulator() {
         <div className="w-[380px] flex-shrink-0 border-r border-navy-600 overflow-y-auto">
           <KpiInputPanel
             kpis={kpis}
-            onChange={handleChange}
+            onChange={onChange}
             demosPerWeek={calc.demosPerWeek}
             demosPerMonth={calc.demosPerMonth}
             bdrsNeeded={calc.bdrsNeeded}

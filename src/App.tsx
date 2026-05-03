@@ -5,6 +5,8 @@ import CompanySnapshot from './components/sections/CompanySnapshot'
 import SalesSimulator from './components/sections/SalesSimulator'
 import HiringRoadmap from './components/sections/HiringRoadmap'
 import Resources from './components/sections/Resources'
+import { DEFAULT_KPIS, KpiState } from './data/defaults'
+import { useSalesCalc } from './hooks/useSalesCalc'
 
 const SECTIONS = [
   { id: 'cover', label: 'Cover' },
@@ -16,6 +18,12 @@ const SECTIONS = [
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('cover')
+  const [kpis, setKpis] = useState<KpiState>(DEFAULT_KPIS)
+  const calc = useSalesCalc(kpis)
+
+  const handleKpiChange = (key: keyof KpiState, value: number) => {
+    setKpis((prev) => ({ ...prev, [key]: value }))
+  }
 
   useEffect(() => {
     const observers: IntersectionObserver[] = []
@@ -43,8 +51,8 @@ export default function App() {
       <main className="ml-[220px] flex-1">
         <Cover />
         <CompanySnapshot />
-        <SalesSimulator />
-        <HiringRoadmap />
+        <SalesSimulator kpis={kpis} onChange={handleKpiChange} calc={calc} />
+        <HiringRoadmap calc={calc} kpis={kpis} />
         <Resources />
       </main>
     </div>
