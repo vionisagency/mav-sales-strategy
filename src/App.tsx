@@ -1,0 +1,52 @@
+import { useEffect, useState } from 'react'
+import Sidebar from './components/Sidebar'
+import Cover from './components/sections/Cover'
+import CompanySnapshot from './components/sections/CompanySnapshot'
+import SalesSimulator from './components/sections/SalesSimulator'
+import HiringRoadmap from './components/sections/HiringRoadmap'
+import Resources from './components/sections/Resources'
+
+const SECTIONS = [
+  { id: 'cover', label: 'Cover' },
+  { id: 'snapshot', label: 'Company Snapshot' },
+  { id: 'simulator', label: 'Sales Simulator' },
+  { id: 'roadmap', label: 'Hiring Roadmap' },
+  { id: 'resources', label: 'Resources' },
+]
+
+export default function App() {
+  const [activeSection, setActiveSection] = useState('cover')
+
+  useEffect(() => {
+    const observers: IntersectionObserver[] = []
+
+    SECTIONS.forEach(({ id }) => {
+      const el = document.getElementById(id)
+      if (!el) return
+
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActiveSection(id)
+        },
+        { threshold: 0.4 },
+      )
+      observer.observe(el)
+      observers.push(observer)
+    })
+
+    return () => observers.forEach((o) => o.disconnect())
+  }, [])
+
+  return (
+    <div className="flex min-h-screen bg-navy-900">
+      <Sidebar sections={SECTIONS} activeSection={activeSection} />
+      <main className="ml-[220px] flex-1">
+        <Cover />
+        <CompanySnapshot />
+        <SalesSimulator />
+        <HiringRoadmap />
+        <Resources />
+      </main>
+    </div>
+  )
+}
