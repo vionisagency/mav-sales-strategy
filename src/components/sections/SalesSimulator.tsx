@@ -14,9 +14,9 @@ export default function SalesSimulator() {
   }
 
   return (
-    <section id="simulator" className="min-h-screen flex flex-col bg-navy-950">
+    <section id="simulator" className="h-screen flex flex-col bg-navy-950 overflow-hidden">
       {/* Section header */}
-      <div className="px-12 pt-16 pb-6 border-b border-navy-600">
+      <div className="px-12 pt-10 pb-5 border-b border-navy-600 flex-shrink-0">
         <motion.div
           initial={{ opacity: 0, y: 12 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -35,9 +35,9 @@ export default function SalesSimulator() {
       </div>
 
       {/* Split layout */}
-      <div className="flex flex-1 min-h-0" style={{ minHeight: 'calc(100vh - 130px)' }}>
+      <div className="flex flex-1 min-h-0 overflow-hidden">
         {/* Left: KPI inputs */}
-        <div className="w-[380px] flex-shrink-0 border-r border-navy-600 overflow-hidden">
+        <div className="w-[380px] flex-shrink-0 border-r border-navy-600 overflow-y-auto">
           <KpiInputPanel
             kpis={kpis}
             onChange={handleChange}

@@ -87,10 +87,10 @@ export default function FunnelChart({ calc, kpis }: Props) {
     kpis.monthlyLeads > 0 ? Math.round((calc.totalDemos / kpis.monthlyLeads) * 100) : 0
 
   return (
-    <div className="flex flex-col h-full px-6 py-6 gap-5">
+    <div className="flex flex-col h-full px-6 py-5 gap-4 overflow-y-auto">
       {/* Chart */}
-      <div className="flex-1 min-h-0">
-        <div className="flex items-center justify-between mb-4">
+      <div>
+        <div className="flex items-center justify-between mb-3">
           <h3 className="text-sm font-700 text-white">Pipeline Funnel — Lead to Demo</h3>
           <div className="flex items-center gap-3">
             {[
@@ -106,10 +106,11 @@ export default function FunnelChart({ calc, kpis }: Props) {
           </div>
         </div>
 
-        <ResponsiveContainer width="100%" height="100%">
+        <ResponsiveContainer width="100%" height={240}>
           <BarChart
             data={funnelData}
             margin={{ top: 8, right: 16, left: -10, bottom: 0 }}
+            barSize={52}
           >
             <CartesianGrid strokeDasharray="3 3" stroke="#2a3a5c" vertical={false} />
             <XAxis
@@ -154,7 +155,7 @@ export default function FunnelChart({ calc, kpis }: Props) {
       </div>
 
       {/* Outreach breakdown mini chart */}
-      <div className="bg-navy-800 border border-navy-600 rounded-xl p-4">
+      <div className="bg-navy-800 border border-navy-600 rounded-xl p-3">
         <p className="text-xs font-700 text-slate-300 mb-3 uppercase tracking-wider">
           Monthly Outreach Hours Breakdown
         </p>
