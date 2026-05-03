@@ -12,8 +12,8 @@ const milestones = [
     bgColor: 'bg-accent/10',
     iconBg: 'bg-accent/15',
     iconColor: 'text-accent',
-    kpi: '30+ dials/day · 5–8 demos booked/week',
-    zoho: 'Set up lead scoring, BDR pipeline view, 7-touch cold sequence',
+    kpi: '80–100 touches/day · 5–8 connections/day · 5+ demos booked/week',
+    zoho: 'Set up lead scoring, BDR pipeline view, 14-touch cold sequence',
     description:
       'BDR owns all cold outreach. Shadows every demo. Builds call scripts and email sequences. Sameet reviews pipeline weekly and runs all closes.',
     tasks: [
@@ -34,7 +34,7 @@ const milestones = [
     bgColor: 'bg-warning/10',
     iconBg: 'bg-warning/15',
     iconColor: 'text-warning',
-    kpi: '15+ demos/month delivered to Sameet',
+    kpi: '15+ demos/month · 35%+ warm connect→demo rate',
     zoho: 'AE pipeline view for Sameet, demo follow-up automation',
     description:
       'BDR independently runs 20-minute intro/discovery calls. Qualifies BANT, books demos for Sameet. Sameet focuses exclusively on demos and closes — no more prospecting.',
@@ -56,7 +56,7 @@ const milestones = [
     bgColor: 'bg-positive/10',
     iconBg: 'bg-positive/15',
     iconColor: 'text-positive',
-    kpi: '25+ demos/month · 2 AEs running deals',
+    kpi: '25+ demos/month · Segun hits 40%+ warm connect→demo rate',
     zoho: 'Second AE pipeline, deal stage automation, closed/won reporting',
     description:
       'Segun starts running full product demos independently. Hire BDR #2 to backfill outreach. Two AEs (Sameet + Segun) split the demo load. First month of true sales team.',
@@ -78,7 +78,7 @@ const milestones = [
     bgColor: 'bg-purple-500/10',
     iconBg: 'bg-purple-500/15',
     iconColor: 'text-purple-400',
-    kpi: '40+ demos/month · documented playbook',
+    kpi: '40+ demos/month · tracked cold/warm/hot connection rates in Zoho',
     zoho: 'Sales analytics dashboard, leaderboard, forecasting in Zoho',
     description:
       '2 AEs + 1–2 BDRs. Fully documented sales playbook. Sameet transitions to growth strategy, partnerships, and enterprise deals. Sales org runs without founder involvement in day-to-day.',

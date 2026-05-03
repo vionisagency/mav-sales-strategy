@@ -756,20 +756,39 @@ LISTENING GOAL: 30 mins/day during ramp period. Pick 1 CRE podcast + 1 sales pod
         content: `B2B SAAS BDR KPI BENCHMARKS — 2024
 Source: Salesforce State of Sales, HubSpot Sales Report, Bridge Group BDR Report
 
+The Sales Simulator on this site uses the connection-based model below.
+"No-answers count as touches" — a dial attempt, voicemail, email, or LinkedIn
+message each count as one touch.
+
 ---
 
-ACTIVITY BENCHMARKS (per BDR, per month):
-- Dials: 400–600 (average: 20–30/day)
-- Conversations (live connections): 80–120 (15–20% connect rate on dials)
-- Demos/meetings booked: 15–25 (20–25% of conversations)
-- Demos attended (show rate): 70–80% of booked
-- Opportunities created from BDR: 12–18/month
+TOUCHES TO GET ONE LIVE CONNECTION (industry benchmarks):
+- Cold lead:  12–16 touches (calls incl. no-answers + emails + LinkedIn)
+- Warm lead:  5–9 touches
+- Hot/inbound lead: 2–4 touches
+
+CONNECTION → DEMO RATE (% of live conversations that book a demo):
+- Cold lead:  10–20%
+- Warm lead:  30–45%
+- Hot/inbound lead: 55–75%
+
+TOUCHES PER DEMO BOOKED (derived: touches-to-connect ÷ connect→demo rate):
+- Cold:  ~80–100 touches per demo booked
+- Warm:  ~15–25 touches per demo booked
+- Hot:   ~4–7 touches per demo booked
+
+---
+
+ACTIVITY BENCHMARKS (per BDR, per month, steady state):
+- Total touches: 1,500–2,000/month (80–100/day)
+- Live connections: 100–150/month
+- Demos booked: 15–25/month
+- Demo show rate: 70–80%
+- Opportunities from BDR: 12–18/month
 
 ---
 
 CONVERSION BENCHMARKS:
-- Cold outreach → demo booking: 2–5%
-- Warm inbound lead → demo booking: 20–40%
 - Demo → qualified opportunity: 50–70%
 - Opportunity → close (AE): 20–30% for SMB SaaS
 - Average sales cycle: 30–60 days for SMB CRM deals
@@ -778,13 +797,15 @@ CONVERSION BENCHMARKS:
 
 WHAT THIS MEANS FOR MAV CONSULTING (Year 1 BDR):
 
-Realistic Month 1–2 targets (ramp period):
-- 50–60 dials/day (ramping up)
-- 8–10 demos booked/week by Month 2
+Ramp period targets (Month 1–2):
+- 50–60 touches/day (ramping)
+- 4–6 live connections/day
+- 5–8 demos booked/week by Month 2
 
 Steady state (Month 3+):
-- 80–100 dials/day
-- 15–20 demos booked/week
+- 80–100 touches/day across all channels
+- 8–12 live connections/day
+- 15–20 demos booked/week (filling Sameet's calendar)
 - 1–2 new closed deals per week attributable to BDR pipeline
 
 AE CAPACITY CHECK:

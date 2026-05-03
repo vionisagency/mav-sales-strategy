@@ -1,17 +1,23 @@
 export interface KpiState {
+  // AE capacity
   hoursPerWeek: number
   demoDuration: number
+  // Lead pool
   monthlyLeads: number
   coldPct: number
   warmPct: number
   hotPct: number
-  coldRate: number
-  warmRate: number
-  hotRate: number
-  coldTouches: number
-  warmTouches: number
-  hotTouches: number
-  touchDuration: number
+  // Per-tier: touches to get one live connection (all channels: calls incl. no-answers, email, LinkedIn)
+  coldTouchesToConnect: number
+  warmTouchesToConnect: number
+  hotTouchesToConnect: number
+  // Per-tier: % of live connections that book a demo
+  coldConnectToDemo: number
+  warmConnectToDemo: number
+  hotConnectToDemo: number
+  // Touch effort
+  minutesPerTouch: number
+  // BDR capacity
   bdrWeeklyHours: number
 }
 
@@ -22,12 +28,12 @@ export const DEFAULT_KPIS: KpiState = {
   coldPct: 50,
   warmPct: 30,
   hotPct: 20,
-  coldRate: 5,
-  warmRate: 20,
-  hotRate: 60,
-  coldTouches: 8,
-  warmTouches: 4,
-  hotTouches: 2,
-  touchDuration: 8,
+  coldTouchesToConnect: 14,
+  warmTouchesToConnect: 7,
+  hotTouchesToConnect: 3,
+  coldConnectToDemo: 15,
+  warmConnectToDemo: 35,
+  hotConnectToDemo: 65,
+  minutesPerTouch: 6,
   bdrWeeklyHours: 30,
 }
