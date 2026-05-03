@@ -28,7 +28,7 @@ export default function App() {
         ([entry]) => {
           if (entry.isIntersecting) setActiveSection(id)
         },
-        { threshold: 0.4 },
+        { threshold: 0.3, rootMargin: '-10% 0px -10% 0px' },
       )
       observer.observe(el)
       observers.push(observer)

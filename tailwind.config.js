@@ -24,6 +24,14 @@ export default {
         warning: '#f59e0b',
         danger: '#ef4444',
       },
+      fontWeight: {
+        '300': '300',
+        '400': '400',
+        '500': '500',
+        '600': '600',
+        '700': '700',
+        '800': '800',
+      },
       animation: {
         'fade-up': 'fadeUp 0.6s ease forwards',
         'pulse-slow': 'pulse 3s ease-in-out infinite',

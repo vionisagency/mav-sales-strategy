@@ -27,9 +27,10 @@ function ResourceCard({ item }: { item: Resource }) {
   return (
     <div className="bg-navy-700 border border-navy-600 rounded-xl overflow-hidden transition-all duration-200 hover:border-navy-500">
       <button
-        className="w-full text-left p-5 cursor-pointer"
+        className="w-full text-left p-5 cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-inset"
         onClick={() => setExpanded((p) => !p)}
         aria-expanded={expanded}
+        aria-label={`${expanded ? 'Collapse' : 'Expand'} ${item.title}`}
       >
         <div className="flex items-start justify-between gap-3">
           <div className="flex-1 min-w-0">
@@ -111,7 +112,8 @@ export default function Resources() {
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={clsx(
-                  'flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-600 transition-all duration-200 cursor-pointer',
+                  'flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-600 transition-colors duration-200 cursor-pointer',
+                  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-accent focus-visible:ring-offset-1 focus-visible:ring-offset-navy-800',
                   isActive
                     ? 'bg-accent text-white shadow-sm'
                     : 'text-slate-400 hover:text-white hover:bg-navy-700',

@@ -172,7 +172,7 @@ export default function KpiInputPanel({ kpis, onChange, demosPerWeek, demosPerMo
               {/* Sum indicator */}
               <div className={`text-right text-[10px] font-600 ${kpis.coldPct + kpis.warmPct + kpis.hotPct === 100 ? 'text-positive' : 'text-danger'}`}>
                 Total: {kpis.coldPct + kpis.warmPct + kpis.hotPct}%
-                {kpis.coldPct + kpis.warmPct + kpis.hotPct !== 100 && ' ⚠ must equal 100%'}
+                {kpis.coldPct + kpis.warmPct + kpis.hotPct !== 100 && ' — must equal 100%'}
               </div>
             </div>
           </div>
